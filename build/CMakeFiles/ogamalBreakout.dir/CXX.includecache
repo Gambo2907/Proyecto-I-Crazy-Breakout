@@ -1,0 +1,66 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/gustavo/Escritorio/breakout-master (1)/Breakout.cpp
+Breakout.h
+/home/gustavo/Escritorio/breakout-master (1)/Breakout.h
+
+/home/gustavo/Escritorio/breakout-master (1)/Breakout.h
+vector
+-
+iostream
+-
+stdlib.h
+-
+math.h
+-
+GLUT/glut.h
+-
+glut.h
+/home/gustavo/Escritorio/breakout-master (1)/glut.h
+MyObjects.h
+/home/gustavo/Escritorio/breakout-master (1)/MyObjects.h
+config.h
+/home/gustavo/Escritorio/breakout-master (1)/config.h
+
+/home/gustavo/Escritorio/breakout-master (1)/MyObjects.h
+
+/home/gustavo/Escritorio/breakout-master (1)/config.h
+
+/home/gustavo/Escritorio/breakout-master (1)/freeglut_std.h
+windows.h
+-
+OpenGL/gl.h
+-
+OpenGL/glu.h
+-
+GL/gl.h
+-
+GL/glu.h
+-
+stdlib.h
+-
+
+/home/gustavo/Escritorio/breakout-master (1)/glut.h
+freeglut_std.h
+/home/gustavo/Escritorio/breakout-master (1)/freeglut_std.h
+
+/home/gustavo/Escritorio/breakout-master (1)/main.cpp
+iostream
+-
+assert.h
+-
+math.h
+/home/gustavo/Escritorio/breakout-master (1)/math.h
+GLUT/glut.h
+-
+glut.h
+/home/gustavo/Escritorio/breakout-master (1)/glut.h
+Breakout.h
+/home/gustavo/Escritorio/breakout-master (1)/Breakout.h
+

@@ -1,0 +1,3 @@
+/home/gustavo/Escritorio/breakout-master (1)/build/CMakeFiles/rebuild_cache.dir
+/home/gustavo/Escritorio/breakout-master (1)/build/CMakeFiles/edit_cache.dir
+/home/gustavo/Escritorio/breakout-master (1)/build/CMakeFiles/ogamalBreakout.dir
