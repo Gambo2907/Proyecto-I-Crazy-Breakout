@@ -111,17 +111,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named ogamalBreakout
+# Target rules for targets named crazyBreakout
 
 # Build rule for target.
-ogamalBreakout: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 ogamalBreakout
-.PHONY : ogamalBreakout
+crazyBreakout: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 crazyBreakout
+.PHONY : crazyBreakout
 
 # fast build rule for target.
-ogamalBreakout/fast:
-	$(MAKE) -f CMakeFiles/ogamalBreakout.dir/build.make CMakeFiles/ogamalBreakout.dir/build
-.PHONY : ogamalBreakout/fast
+crazyBreakout/fast:
+	$(MAKE) -f CMakeFiles/crazyBreakout.dir/build.make CMakeFiles/crazyBreakout.dir/build
+.PHONY : crazyBreakout/fast
 
 Breakout.o: Breakout.cpp.o
 
@@ -129,7 +129,7 @@ Breakout.o: Breakout.cpp.o
 
 # target to build an object file
 Breakout.cpp.o:
-	$(MAKE) -f CMakeFiles/ogamalBreakout.dir/build.make CMakeFiles/ogamalBreakout.dir/Breakout.cpp.o
+	$(MAKE) -f CMakeFiles/crazyBreakout.dir/build.make CMakeFiles/crazyBreakout.dir/Breakout.cpp.o
 .PHONY : Breakout.cpp.o
 
 Breakout.i: Breakout.cpp.i
@@ -138,7 +138,7 @@ Breakout.i: Breakout.cpp.i
 
 # target to preprocess a source file
 Breakout.cpp.i:
-	$(MAKE) -f CMakeFiles/ogamalBreakout.dir/build.make CMakeFiles/ogamalBreakout.dir/Breakout.cpp.i
+	$(MAKE) -f CMakeFiles/crazyBreakout.dir/build.make CMakeFiles/crazyBreakout.dir/Breakout.cpp.i
 .PHONY : Breakout.cpp.i
 
 Breakout.s: Breakout.cpp.s
@@ -147,7 +147,7 @@ Breakout.s: Breakout.cpp.s
 
 # target to generate assembly for a file
 Breakout.cpp.s:
-	$(MAKE) -f CMakeFiles/ogamalBreakout.dir/build.make CMakeFiles/ogamalBreakout.dir/Breakout.cpp.s
+	$(MAKE) -f CMakeFiles/crazyBreakout.dir/build.make CMakeFiles/crazyBreakout.dir/Breakout.cpp.s
 .PHONY : Breakout.cpp.s
 
 main.o: main.cpp.o
@@ -156,7 +156,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) -f CMakeFiles/ogamalBreakout.dir/build.make CMakeFiles/ogamalBreakout.dir/main.cpp.o
+	$(MAKE) -f CMakeFiles/crazyBreakout.dir/build.make CMakeFiles/crazyBreakout.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -165,7 +165,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) -f CMakeFiles/ogamalBreakout.dir/build.make CMakeFiles/ogamalBreakout.dir/main.cpp.i
+	$(MAKE) -f CMakeFiles/crazyBreakout.dir/build.make CMakeFiles/crazyBreakout.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -174,7 +174,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) -f CMakeFiles/ogamalBreakout.dir/build.make CMakeFiles/ogamalBreakout.dir/main.cpp.s
+	$(MAKE) -f CMakeFiles/crazyBreakout.dir/build.make CMakeFiles/crazyBreakout.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 # Help Target
@@ -185,7 +185,7 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... ogamalBreakout"
+	@echo "... crazyBreakout"
 	@echo "... Breakout.o"
 	@echo "... Breakout.i"
 	@echo "... Breakout.s"

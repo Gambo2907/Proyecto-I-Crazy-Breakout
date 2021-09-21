@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/gustavo/Documentos/GitHub/Proyecto-I-Crazy-Breakout/Breakout.cpp" "/home/gustavo/Documentos/GitHub/Proyecto-I-Crazy-Breakout/build/CMakeFiles/ogamalBreakout.dir/Breakout.cpp.o"
-  "/home/gustavo/Documentos/GitHub/Proyecto-I-Crazy-Breakout/main.cpp" "/home/gustavo/Documentos/GitHub/Proyecto-I-Crazy-Breakout/build/CMakeFiles/ogamalBreakout.dir/main.cpp.o"
+  "/home/gustavo/Documentos/GitHub/Proyecto-I-Crazy-Breakout/Breakout.cpp" "/home/gustavo/Documentos/GitHub/Proyecto-I-Crazy-Breakout/build/CMakeFiles/crazyBreakout.dir/Breakout.cpp.o"
+  "/home/gustavo/Documentos/GitHub/Proyecto-I-Crazy-Breakout/main.cpp" "/home/gustavo/Documentos/GitHub/Proyecto-I-Crazy-Breakout/build/CMakeFiles/crazyBreakout.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

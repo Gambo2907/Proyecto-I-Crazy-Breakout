@@ -1,1 +1,0 @@
-/usr/bin/c++  -g -Wall  -rdynamic CMakeFiles/ogamalBreakout.dir/Breakout.cpp.o CMakeFiles/ogamalBreakout.dir/main.cpp.o  -o ogamalBreakout  -lGL -lGLU -lglut -lXmu -lXi 

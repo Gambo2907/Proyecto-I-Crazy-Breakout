@@ -53,7 +53,7 @@ CMAKE_BINARY_DIR = /home/gustavo/Documentos/GitHub/Proyecto-I-Crazy-Breakout/bui
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/ogamalBreakout.dir/all
+all: CMakeFiles/crazyBreakout.dir/all
 
 .PHONY : all
 
@@ -63,36 +63,36 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/ogamalBreakout.dir/clean
+clean: CMakeFiles/crazyBreakout.dir/clean
 
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/ogamalBreakout.dir
+# Target rules for target CMakeFiles/crazyBreakout.dir
 
 # All Build rule for target.
-CMakeFiles/ogamalBreakout.dir/all:
-	$(MAKE) -f CMakeFiles/ogamalBreakout.dir/build.make CMakeFiles/ogamalBreakout.dir/depend
-	$(MAKE) -f CMakeFiles/ogamalBreakout.dir/build.make CMakeFiles/ogamalBreakout.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gustavo/Documentos/GitHub/Proyecto-I-Crazy-Breakout/build/CMakeFiles --progress-num=1,2,3 "Built target ogamalBreakout"
-.PHONY : CMakeFiles/ogamalBreakout.dir/all
+CMakeFiles/crazyBreakout.dir/all:
+	$(MAKE) -f CMakeFiles/crazyBreakout.dir/build.make CMakeFiles/crazyBreakout.dir/depend
+	$(MAKE) -f CMakeFiles/crazyBreakout.dir/build.make CMakeFiles/crazyBreakout.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gustavo/Documentos/GitHub/Proyecto-I-Crazy-Breakout/build/CMakeFiles --progress-num=1,2,3 "Built target crazyBreakout"
+.PHONY : CMakeFiles/crazyBreakout.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/ogamalBreakout.dir/rule: cmake_check_build_system
+CMakeFiles/crazyBreakout.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/gustavo/Documentos/GitHub/Proyecto-I-Crazy-Breakout/build/CMakeFiles 3
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/ogamalBreakout.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/crazyBreakout.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/gustavo/Documentos/GitHub/Proyecto-I-Crazy-Breakout/build/CMakeFiles 0
-.PHONY : CMakeFiles/ogamalBreakout.dir/rule
+.PHONY : CMakeFiles/crazyBreakout.dir/rule
 
 # Convenience name for target.
-ogamalBreakout: CMakeFiles/ogamalBreakout.dir/rule
+crazyBreakout: CMakeFiles/crazyBreakout.dir/rule
 
-.PHONY : ogamalBreakout
+.PHONY : crazyBreakout
 
 # clean rule for target.
-CMakeFiles/ogamalBreakout.dir/clean:
-	$(MAKE) -f CMakeFiles/ogamalBreakout.dir/build.make CMakeFiles/ogamalBreakout.dir/clean
-.PHONY : CMakeFiles/ogamalBreakout.dir/clean
+CMakeFiles/crazyBreakout.dir/clean:
+	$(MAKE) -f CMakeFiles/crazyBreakout.dir/build.make CMakeFiles/crazyBreakout.dir/clean
+.PHONY : CMakeFiles/crazyBreakout.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

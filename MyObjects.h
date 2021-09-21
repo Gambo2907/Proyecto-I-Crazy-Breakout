@@ -1,7 +1,7 @@
 
 
-#ifndef ogamalBreakout_MyObjects_h
-#define ogamalBreakout_MyObjects_h
+#ifndef crazyBreakout_MyObjects_h
+#define crazyBreakout_MyObjects_h
 
 // Ball
 struct Ball {

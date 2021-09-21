@@ -16,13 +16,13 @@ include_directories(${OPENGL_INCLUDE_DIR})
 include_directories(${GLUT_INCLUDE_DIR})
 
 # Add all files to the configuration
-file(GLOB ogamalBreakout_SRC
+file(GLOB crazyBreakout_SRC
     "*.h"
     "*.cpp"
 )
 
 # Create an executable
-add_executable(ogamalBreakout ${ogamalBreakout_SRC})
+add_executable(crazyBreakout ${crazyBreakout_SRC})
 
 # Add libraries
-target_link_libraries(ogamalBreakout ${OPENGL_LIBRARIES} ${GLUT_LIBRARIES})
+target_link_libraries(crazyBreakout ${OPENGL_LIBRARIES} ${GLUT_LIBRARIES})

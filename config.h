@@ -1,7 +1,7 @@
 
 
-#ifndef ogamalBreakout_config_h
-#define ogamalBreakout_config_h
+#ifndef crazyBreakout_config_h
+#define crazyBreakout_config_h
 
 // Force Redraw timer
 #define TIMER 16.6          // 60 frame per second
