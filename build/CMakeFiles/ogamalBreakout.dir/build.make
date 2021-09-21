@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/home/gustavo/Escritorio/breakout-master (1)"
+CMAKE_SOURCE_DIR = /home/gustavo/Documentos/GitHub/Proyecto-I-Crazy-Breakout
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/home/gustavo/Escritorio/breakout-master (1)/build"
+CMAKE_BINARY_DIR = /home/gustavo/Documentos/GitHub/Proyecto-I-Crazy-Breakout/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/ogamalBreakout.dir/depend.make
@@ -59,29 +59,29 @@ include CMakeFiles/ogamalBreakout.dir/flags.make
 
 CMakeFiles/ogamalBreakout.dir/Breakout.cpp.o: CMakeFiles/ogamalBreakout.dir/flags.make
 CMakeFiles/ogamalBreakout.dir/Breakout.cpp.o: ../Breakout.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/gustavo/Escritorio/breakout-master (1)/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/ogamalBreakout.dir/Breakout.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ogamalBreakout.dir/Breakout.cpp.o -c "/home/gustavo/Escritorio/breakout-master (1)/Breakout.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gustavo/Documentos/GitHub/Proyecto-I-Crazy-Breakout/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/ogamalBreakout.dir/Breakout.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ogamalBreakout.dir/Breakout.cpp.o -c /home/gustavo/Documentos/GitHub/Proyecto-I-Crazy-Breakout/Breakout.cpp
 
 CMakeFiles/ogamalBreakout.dir/Breakout.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ogamalBreakout.dir/Breakout.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/gustavo/Escritorio/breakout-master (1)/Breakout.cpp" > CMakeFiles/ogamalBreakout.dir/Breakout.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gustavo/Documentos/GitHub/Proyecto-I-Crazy-Breakout/Breakout.cpp > CMakeFiles/ogamalBreakout.dir/Breakout.cpp.i
 
 CMakeFiles/ogamalBreakout.dir/Breakout.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ogamalBreakout.dir/Breakout.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/gustavo/Escritorio/breakout-master (1)/Breakout.cpp" -o CMakeFiles/ogamalBreakout.dir/Breakout.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gustavo/Documentos/GitHub/Proyecto-I-Crazy-Breakout/Breakout.cpp -o CMakeFiles/ogamalBreakout.dir/Breakout.cpp.s
 
 CMakeFiles/ogamalBreakout.dir/main.cpp.o: CMakeFiles/ogamalBreakout.dir/flags.make
 CMakeFiles/ogamalBreakout.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/gustavo/Escritorio/breakout-master (1)/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ogamalBreakout.dir/main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ogamalBreakout.dir/main.cpp.o -c "/home/gustavo/Escritorio/breakout-master (1)/main.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gustavo/Documentos/GitHub/Proyecto-I-Crazy-Breakout/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ogamalBreakout.dir/main.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ogamalBreakout.dir/main.cpp.o -c /home/gustavo/Documentos/GitHub/Proyecto-I-Crazy-Breakout/main.cpp
 
 CMakeFiles/ogamalBreakout.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ogamalBreakout.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/gustavo/Escritorio/breakout-master (1)/main.cpp" > CMakeFiles/ogamalBreakout.dir/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gustavo/Documentos/GitHub/Proyecto-I-Crazy-Breakout/main.cpp > CMakeFiles/ogamalBreakout.dir/main.cpp.i
 
 CMakeFiles/ogamalBreakout.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ogamalBreakout.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/gustavo/Escritorio/breakout-master (1)/main.cpp" -o CMakeFiles/ogamalBreakout.dir/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gustavo/Documentos/GitHub/Proyecto-I-Crazy-Breakout/main.cpp -o CMakeFiles/ogamalBreakout.dir/main.cpp.s
 
 # Object files for target ogamalBreakout
 ogamalBreakout_OBJECTS = \
@@ -100,7 +100,7 @@ ogamalBreakout: /usr/lib/x86_64-linux-gnu/libglut.so
 ogamalBreakout: /usr/lib/x86_64-linux-gnu/libXmu.so
 ogamalBreakout: /usr/lib/x86_64-linux-gnu/libXi.so
 ogamalBreakout: CMakeFiles/ogamalBreakout.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home/gustavo/Escritorio/breakout-master (1)/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable ogamalBreakout"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/gustavo/Documentos/GitHub/Proyecto-I-Crazy-Breakout/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable ogamalBreakout"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ogamalBreakout.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -113,6 +113,6 @@ CMakeFiles/ogamalBreakout.dir/clean:
 .PHONY : CMakeFiles/ogamalBreakout.dir/clean
 
 CMakeFiles/ogamalBreakout.dir/depend:
-	cd "/home/gustavo/Escritorio/breakout-master (1)/build" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/home/gustavo/Escritorio/breakout-master (1)" "/home/gustavo/Escritorio/breakout-master (1)" "/home/gustavo/Escritorio/breakout-master (1)/build" "/home/gustavo/Escritorio/breakout-master (1)/build" "/home/gustavo/Escritorio/breakout-master (1)/build/CMakeFiles/ogamalBreakout.dir/DependInfo.cmake" --color=$(COLOR)
+	cd /home/gustavo/Documentos/GitHub/Proyecto-I-Crazy-Breakout/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/gustavo/Documentos/GitHub/Proyecto-I-Crazy-Breakout /home/gustavo/Documentos/GitHub/Proyecto-I-Crazy-Breakout /home/gustavo/Documentos/GitHub/Proyecto-I-Crazy-Breakout/build /home/gustavo/Documentos/GitHub/Proyecto-I-Crazy-Breakout/build /home/gustavo/Documentos/GitHub/Proyecto-I-Crazy-Breakout/build/CMakeFiles/ogamalBreakout.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/ogamalBreakout.dir/depend
 

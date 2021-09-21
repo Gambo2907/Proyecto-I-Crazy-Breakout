@@ -3,7 +3,7 @@
 cmake_minimum_required(VERSION 2.6)
 
 # Set main project name
-project(ogamalBreakout)
+project(Proyecto-I-Crazy-Breakout)
 
 # Find packages
 FIND_PACKAGE(OpenGL REQUIRED)

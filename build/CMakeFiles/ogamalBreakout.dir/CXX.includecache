@@ -6,11 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/home/gustavo/Escritorio/breakout-master (1)/Breakout.cpp
+/home/gustavo/Documentos/GitHub/Proyecto-I-Crazy-Breakout/Breakout.cpp
 Breakout.h
-/home/gustavo/Escritorio/breakout-master (1)/Breakout.h
+/home/gustavo/Documentos/GitHub/Proyecto-I-Crazy-Breakout/Breakout.h
 
-/home/gustavo/Escritorio/breakout-master (1)/Breakout.h
+/home/gustavo/Documentos/GitHub/Proyecto-I-Crazy-Breakout/Breakout.h
 vector
 -
 iostream
@@ -22,17 +22,17 @@ math.h
 GLUT/glut.h
 -
 glut.h
-/home/gustavo/Escritorio/breakout-master (1)/glut.h
+/home/gustavo/Documentos/GitHub/Proyecto-I-Crazy-Breakout/glut.h
 MyObjects.h
-/home/gustavo/Escritorio/breakout-master (1)/MyObjects.h
+/home/gustavo/Documentos/GitHub/Proyecto-I-Crazy-Breakout/MyObjects.h
 config.h
-/home/gustavo/Escritorio/breakout-master (1)/config.h
+/home/gustavo/Documentos/GitHub/Proyecto-I-Crazy-Breakout/config.h
 
-/home/gustavo/Escritorio/breakout-master (1)/MyObjects.h
+/home/gustavo/Documentos/GitHub/Proyecto-I-Crazy-Breakout/MyObjects.h
 
-/home/gustavo/Escritorio/breakout-master (1)/config.h
+/home/gustavo/Documentos/GitHub/Proyecto-I-Crazy-Breakout/config.h
 
-/home/gustavo/Escritorio/breakout-master (1)/freeglut_std.h
+/home/gustavo/Documentos/GitHub/Proyecto-I-Crazy-Breakout/freeglut_std.h
 windows.h
 -
 OpenGL/gl.h
@@ -46,21 +46,21 @@ GL/glu.h
 stdlib.h
 -
 
-/home/gustavo/Escritorio/breakout-master (1)/glut.h
+/home/gustavo/Documentos/GitHub/Proyecto-I-Crazy-Breakout/glut.h
 freeglut_std.h
-/home/gustavo/Escritorio/breakout-master (1)/freeglut_std.h
+/home/gustavo/Documentos/GitHub/Proyecto-I-Crazy-Breakout/freeglut_std.h
 
-/home/gustavo/Escritorio/breakout-master (1)/main.cpp
+/home/gustavo/Documentos/GitHub/Proyecto-I-Crazy-Breakout/main.cpp
 iostream
 -
 assert.h
 -
 math.h
-/home/gustavo/Escritorio/breakout-master (1)/math.h
+/home/gustavo/Documentos/GitHub/Proyecto-I-Crazy-Breakout/math.h
 GLUT/glut.h
 -
 glut.h
-/home/gustavo/Escritorio/breakout-master (1)/glut.h
+/home/gustavo/Documentos/GitHub/Proyecto-I-Crazy-Breakout/glut.h
 Breakout.h
-/home/gustavo/Escritorio/breakout-master (1)/Breakout.h
+/home/gustavo/Documentos/GitHub/Proyecto-I-Crazy-Breakout/Breakout.h
 
