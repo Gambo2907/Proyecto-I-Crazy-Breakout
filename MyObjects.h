@@ -25,6 +25,8 @@ struct Brick {
     GLfloat r, g, b;
     GLint health;
     GLint value;
+    GLint score;
+    GLboolean broke;
 };
 
 #endif
