@@ -14,6 +14,8 @@
 
 Breakout game;
 
+
+
 // Define the display function
 void myDisplay()
 {
@@ -58,8 +60,12 @@ int main(int argc, char ** argv)
 	glutInitWindowSize(WINWIDTH, WINHEIGHT);
 	glutInitWindowPosition(100, 100);
 	glutCreateWindow(WINTITLE2);
+	
+	
+
+	
 	// Init game
-	game.init();
+	game.WelcomeScreen();
 	
 	// Draw scene
 	glutDisplayFunc(myDisplay);
@@ -67,7 +73,6 @@ int main(int argc, char ** argv)
 	glutReshapeFunc(myReshape);
 	// Handle mouse clicks
 	// Handle mouse motion
-//	glutMotionFunc(myMouseMove);
     glutPassiveMotionFunc(myMouseMove);
 	// Handle keyboard strokes
 	glutKeyboardFunc(myKeyStroke);

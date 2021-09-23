@@ -33,12 +33,9 @@ void Breakout::display(void) {
 
     // Select which state of the game to display
     switch (gameState) {
-        case Menu:
-            break;
-            
         case INIT:
             // Init values
-            init();
+            WelcomeScreen();
             break;
             
         case Gameplay:
@@ -50,6 +47,8 @@ void Breakout::display(void) {
                 lifesCount--;
                 //reward = 100;
             } else if (balls.size() <= 0) {
+                LoseScreen();
+        
             }
             
             // If no bricks, player wins the level
@@ -57,12 +56,16 @@ void Breakout::display(void) {
                 level++;
                 initBricks();
             } else if (bricks.size() <= 0) {
-        
+                WinScreen();
             }
             break;
             
-        case Scoreboard:
-            // TODO
+        case Win:
+            WinScreen();
+            break;
+
+        case LOSE:
+            LoseScreen();
             break;
         
         default:
@@ -78,6 +81,59 @@ void recomputeFrame(int value) {
 	glutPostRedisplay();
 }
 
+void Breakout::WelcomeScreen(void){
+    glColor3f(1,1,1);
+    glRasterPos2f(315, 300);
+    char msg1[]= "Crazy Breakout";
+    for(int i=0; i<strlen(msg1); i++){
+        glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, msg1[i]);
+    }
+
+    glRasterPos2f(30, 50);
+    char msg2[]= "Proyecto 1";
+    for(int i=0; i<strlen(msg2); i++){
+        glutBitmapCharacter(GLUT_BITMAP_9_BY_15, msg2[i]);
+    }
+    glColor3f(1,1,1);
+    glRasterPos2f(580,540);
+    char msg3[]= "Presiona p para jugar";
+    for(int i=0; i<strlen(msg3); i++){
+        glutBitmapCharacter(GLUT_BITMAP_9_BY_15, msg3[i]);
+    }
+    gameState = Breakout::INIT;
+}
+void Breakout::WinScreen(void){
+    gameState = Breakout::Win;
+    glColor3f(1,0,0);
+    glRasterPos2f(315, 300);
+    char msg1[]= "Ganaste";
+    for(int i=0; i<strlen(msg1); i++){
+        glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, msg1[i]);
+    }
+    glColor3f(1,1,1);
+    glRasterPos2f(315,450);
+    char msg3[]= "Presiona p para volver a jugar y esc para salir";
+    for(int i=0; i<strlen(msg3); i++){
+        glutBitmapCharacter(GLUT_BITMAP_9_BY_15, msg3[i]);
+    }
+    glutPostRedisplay;
+}
+void Breakout::LoseScreen(void){
+    gameState = Breakout::LOSE;
+    glColor3f(1,0,0);
+    glRasterPos2f(315, 300);
+    char msg1[]= "Perdiste";
+    for(int i=0; i<strlen(msg1); i++){
+        glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, msg1[i]);
+    }
+    glColor3f(1,1,1);
+    glRasterPos2f(315,450);
+    char msg3[]= "Presiona p para volver a jugar y esc para salir";
+    for(int i=0; i<strlen(msg3); i++){
+        glutBitmapCharacter(GLUT_BITMAP_9_BY_15, msg3[i]);
+    }
+    glutPostRedisplay;
+}
 
 void Breakout::init(void) {
     // Reset game statistics
@@ -97,10 +153,12 @@ void Breakout::init(void) {
     
     // Add ball and paddle
     initPaddle();
-    
-    // Start game play
+    // Add menu
     gameState = Breakout::Gameplay;
+    // Start game play
+    
 }
+
 
 void Breakout::drawBackground(void) {
     glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
@@ -119,7 +177,7 @@ void Breakout::drawBackground(void) {
 void Breakout::drawGame(void) {
     // // Draw coordinates for guidance
     //drawCoordinate();
-    
+
     // Draw balls
     drawBalls();
     
@@ -593,6 +651,7 @@ Iterator Breakout::hitBrick(Iterator brick) {
     
 }
 
+
 void Breakout::initBricks(void) {
     if (level == 1)
         bricksLevel1();
@@ -612,6 +671,7 @@ void Breakout::bricksLevel1(void) {
     newBrick.width = (WALLWIDTH - (WALLCOLS - 2) * WALLSPACE) / WALLCOLS;
     newBrick.height = (WALLHEIGHT - (WALLROWS - 2) * WALLSPACE) / WALLROWS;
 
+    
     
 
     for (int i = 0; i < WALLROWS; ++i) {
@@ -696,6 +756,7 @@ void Breakout::bricksLevel2(void) {
     }
 }
 
+
 void Breakout::drawGameStats(void) {
     glBegin(GL_LINES);
     // Bottom right (red)
@@ -770,14 +831,15 @@ void Breakout::reshape(int width, int height) {
         glutReshapeWindow(WINWIDTH, WINHEIGHT);
 }
 
-/*void Breakout::mouseClick(int button, int state, int x, int y) {
-    if (button == GLUT_LEFT_BUTTON && state == GLUT_DOWN) {
-        newBall(x, y);
+void Breakout::RandomBalls(void) {
+    
+    if(score == 100){
+        newBall(-1, -1);
     }
     
     // Force redraw
-	glutPostRedisplay();
-}*/
+    glutPostRedisplay();
+}
 
 void Breakout::mouseMove(int x, int y) {
     y = WINHEIGHT - y;
@@ -796,12 +858,13 @@ void Breakout::keyStroke(unsigned char key, int x, int y) {
         case 'q': // Exit
             exit(0);
             break;
-        case 'n': // New game
+        case 'p': // New game
             init();
             break;
-        //case 'h':
-            //lifesCount++;
-            //break;
+        /*case 'h':
+            newBall(-1,-1);
+            glutPostRedisplay();
+            break;*/
         case 27: // Esc button
             exit(0);
             break;

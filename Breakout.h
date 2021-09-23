@@ -7,6 +7,7 @@
 #include <iostream>
 #include <stdlib.h>
 #include <math.h>
+#include <string.h>
 #if defined(__APPLE__) || defined(MACOSX)
 	#include <GLUT/glut.h>
 #else
@@ -26,10 +27,13 @@ public:
 	~Breakout();
     
     // Public functions (handle GLUT calls)
+    void WelcomeScreen(void);
 	void display(void);
 	void init(void);
+    void WinScreen(void);
+    void LoseScreen(void);
 	void reshape(int width, int height);
-	void mouseClick(int button, int state, int x, int y);
+	void RandomBalls(void); 
 	void mouseMove(int x, int y);
 	void keyStroke(unsigned char key, int x, int y);
 	void specialKeyPos(int key, int x, int y);
@@ -43,7 +47,7 @@ private:
     int lifesCount;
     
     // Possible ame mode
-    enum State {Menu, INIT, Gameplay, Scoreboard};
+    enum State {INIT, Gameplay, Win, LOSE};
     Breakout::State gameState;
     
     // Balls

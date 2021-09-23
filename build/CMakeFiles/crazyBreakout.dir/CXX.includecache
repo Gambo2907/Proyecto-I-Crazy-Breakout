@@ -19,6 +19,8 @@ stdlib.h
 -
 math.h
 -
+string.h
+-
 GLUT/glut.h
 -
 glut.h
