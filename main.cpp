@@ -8,7 +8,7 @@
 #else
 	#include "glut.h"
 #endif
-
+#include "cliente.h"
 #include "Breakout.h"
 
 
@@ -71,7 +71,7 @@ int main(int argc, char ** argv)
 	glutDisplayFunc(myDisplay);
 	// Handle reshape
 	glutReshapeFunc(myReshape);
-	// Handle mouse clicks
+	
 	// Handle mouse motion
     glutPassiveMotionFunc(myMouseMove);
 	// Handle keyboard strokes
