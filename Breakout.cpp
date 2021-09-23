@@ -82,13 +82,13 @@ void recomputeFrame(int value) {
 }
 
 void Breakout::WelcomeScreen(void){
-    glColor3f(1,1,1);
+    glColor3f(1,0,0);
     glRasterPos2f(315, 300);
     char msg1[]= "Crazy Breakout";
     for(int i=0; i<strlen(msg1); i++){
         glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, msg1[i]);
     }
-
+    glColor3f(1,1,1);
     glRasterPos2f(30, 50);
     char msg2[]= "Proyecto 1";
     for(int i=0; i<strlen(msg2); i++){
@@ -831,15 +831,15 @@ void Breakout::reshape(int width, int height) {
         glutReshapeWindow(WINWIDTH, WINHEIGHT);
 }
 
-void Breakout::RandomBalls(void) {
+//void Breakout::RandomBalls(void) {
     
-    if(score == 100){
-        newBall(-1, -1);
-    }
+    //if(score == 100){
+        //newBall(-1, -1);
+    //}
     
     // Force redraw
-    glutPostRedisplay();
-}
+    //glutPostRedisplay();
+//}
 
 void Breakout::mouseMove(int x, int y) {
     y = WINHEIGHT - y;

@@ -8,7 +8,6 @@
 #else
 	#include "glut.h"
 #endif
-#include "cliente.h"
 #include "Breakout.h"
 
 
