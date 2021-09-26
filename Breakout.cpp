@@ -111,7 +111,7 @@ void Breakout::WinScreen(void){
         glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, msg1[i]);
     }
     glColor3f(1,1,1);
-    glRasterPos2f(315,300);
+    glRasterPos2f(190,380);
     char msg3[]= "Presiona p para volver a jugar y esc para salir";
     for(int i=0; i<strlen(msg3); i++){
         glutBitmapCharacter(GLUT_BITMAP_9_BY_15, msg3[i]);
@@ -127,7 +127,7 @@ void Breakout::LoseScreen(void){
         glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, msg1[i]);
     }
     glColor3f(1,1,1);
-    glRasterPos2f(315,300);
+    glRasterPos2f(190,380);
     char msg3[]= "Presiona p para volver a jugar y esc para salir";
     for(int i=0; i<strlen(msg3); i++){
         glutBitmapCharacter(GLUT_BITMAP_9_BY_15, msg3[i]);
