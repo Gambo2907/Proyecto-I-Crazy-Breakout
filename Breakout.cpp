@@ -355,7 +355,7 @@ void Breakout::drawBalls(void) {
                 if ((it->ypos + it->radius - br->ypos) >= -10 && (it->ypos + it->radius - br->ypos) <= 0) {
                     it->yvel *= -1;
                     br = hitBrick(br);
-                   if(br->score = 10){
+                    if(br->score = 10){
                         if(br->broke = true){
                             reward = br->score;
                             score += reward;
@@ -609,6 +609,7 @@ Iterator Breakout::hitBrick(Iterator brick) {
         }
 
     }
+
     else if(brick->score = 15){
         if (brick->health > 2) {
             brick->health -= 1;
@@ -654,12 +655,12 @@ void Breakout::initBricks(void) {
 
 void Breakout::bricksLevel1(void) {
     Brick newBrick;
-    newBrick.r = 0.95f;
-    newBrick.g = 0.95f;
-    newBrick.b = 0.95f;
-    newBrick.health = 0;
-    newBrick.score = 0;
-    newBrick.broke = false;
+    newBrick.r;
+    newBrick.g;
+    newBrick.b;
+    newBrick.health;
+    newBrick.score;
+    newBrick.broke;
     newBrick.width = (WALLWIDTH - (WALLCOLS - 2) * WALLSPACE) / WALLCOLS;
     newBrick.height = (WALLHEIGHT - (WALLROWS - 2) * WALLSPACE) / WALLROWS;
 

@@ -52,17 +52,3 @@ stdlib.h
 freeglut_std.h
 /home/gustavo/Documentos/GitHub/Proyecto-I-Crazy-Breakout/freeglut_std.h
 
-/home/gustavo/Documentos/GitHub/Proyecto-I-Crazy-Breakout/main.cpp
-iostream
--
-assert.h
--
-math.h
-/home/gustavo/Documentos/GitHub/Proyecto-I-Crazy-Breakout/math.h
-GLUT/glut.h
--
-glut.h
-/home/gustavo/Documentos/GitHub/Proyecto-I-Crazy-Breakout/glut.h
-Breakout.h
-/home/gustavo/Documentos/GitHub/Proyecto-I-Crazy-Breakout/Breakout.h
-
