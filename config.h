@@ -18,7 +18,6 @@
 #define WINTITLE "Breakout Game"
 const int WINWIDTH  = 800;
 const int WINHEIGHT = 600;
-#define WINTITLE2 "Breakout Game Menu"
 const int WINWIDTH2  = 800;
 const int WINHEIGHT2 = 600;
 

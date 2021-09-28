@@ -58,7 +58,7 @@ int main(int argc, char ** argv)
 	// Init window size, position, title
 	glutInitWindowSize(WINWIDTH, WINHEIGHT);
 	glutInitWindowPosition(100, 100);
-	glutCreateWindow(WINTITLE2);
+	glutCreateWindow(WINTITLE);
 	
 	
 

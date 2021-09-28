@@ -175,6 +175,7 @@ void Breakout::drawBackground(void) {
 }
 
 void Breakout::drawGame(void) {
+    
     // // Draw coordinates for guidance
     //drawCoordinate();
 
