@@ -234,7 +234,7 @@ void Breakout::drawBalls(void) {
             continue;
         }
         
-        // Collisión con los bloques
+        // Colisión con los bloques
         for (std::vector<Brick>::iterator br = bricks.begin(); br != bricks.end(); ) {
             
             // Comprueba la colisión entre la bola y los lados verticales del bloque.
@@ -245,29 +245,24 @@ void Breakout::drawBalls(void) {
                     it->xvel *= -1;
                     br = hitBrick(br);
 
-                    if(br->score = 10){
-                        if(br->broke = true){
-                            reward = br->score;
+                    if(br->broke = true){
+                        
+                        if(br->score = 10){
+                            reward = 10;
                             score += reward;
-
                         }
-                    }
-                    else if(br->score = 15){
-                        if(br->broke = true){
-                            reward = br->score;
-                            
-                            
-                        }
-                            
-                    }
-                    else if(br->score = 20){
-                        if(br->broke = true){
-                            reward = br->score;
+                        else if(br->score = 15){
+                            reward = 15;
                             score += reward;
-                            
                         }
+                        else if(br->score = 30){
+                            reward = 30;
+                            score += reward;
+                        }
+                        
+                        reward = 0;
+                        score += reward;
                     }
-                   
                    
                 
                     continue;
@@ -280,30 +275,22 @@ void Breakout::drawBalls(void) {
                 if ((it->xpos + it->radius - br->xpos) >= -5 && (it->xpos + it->radius - br->xpos) <= 0) {
                     it->xvel *= -1;
                     br = hitBrick(br);
-                    if(br->score = 10){
-                        if(br->broke = true){
-                            reward = br->score;
+                    if(br->broke = true){
+                        
+                        if(br->score = 10){
+                            reward = 10;
                             score += reward;
-
                         }
-                    }
-                    else if(br->score = 15){
-                        if(br->broke = true){
-                            reward = br->score;
+                        else if(br->score = 15){
+                            reward = 15;
                             score += reward;
-                            
-                                
                         }
-                            
-                    }
-                    else if(br->score = 20){
-                        if(br->broke = true){
-                            reward = br->score;
+                        else if(br->score = 30){
+                            reward = 30;
                             score += reward;
-                           
-                            
                         }
-
+                        reward = 0;
+                        score += reward;
                     }
                     
                  
@@ -320,30 +307,21 @@ void Breakout::drawBalls(void) {
                 if ((it->ypos - it->radius - br->ypos - br->height) <= 10 && (it->ypos - it->radius - br->ypos - br->height) >= 0) {
                     it->yvel *= -1;
                     br = hitBrick(br);
-                    if(br->score = 10){
-                        if(br->broke = true){
-                            reward = br->score;
+                    if(br->broke = true){
+                        if(br->score = 10){
+                            reward = 10;
                             score += reward;
-
                         }
-                    }
-                    else if(br->score = 15){
-                        if(br->broke = true){
-                            reward = br->score;
+                        else if(br->score = 15){
+                            reward = 15;
                             score += reward;
-                            
-                                
                         }
-
-                            
-                    }
-                    else if(br->score = 20){
-                        if(br->broke = true){
-                            reward = br->score;
+                        else if(br->score = 30){
+                            reward = 30;
                             score += reward;
-                            
                         }
-                    
+                        reward = 0;
+                        score += reward;
                     }
                    
                 
@@ -355,29 +333,23 @@ void Breakout::drawBalls(void) {
                 if ((it->ypos + it->radius - br->ypos) >= -10 && (it->ypos + it->radius - br->ypos) <= 0) {
                     it->yvel *= -1;
                     br = hitBrick(br);
-                    if(br->score = 10){
-                        if(br->broke = true){
-                            reward = br->score;
-                            score += reward;
-
-                        }
-                    }
-                    else if(br->score = 15){
-                        if(br->broke = true){
-                            reward = br->score;
+                    if(br->broke = true){
+                        if(br->score = 10){
+                            reward = 10;
                             score += reward;
                         }
-                    
-                            
-                    }
-                    else if(br->score = 20){
-                        if(br->broke = true){
-                            reward = br->score;
+                        else if(br->score = 15){
+                            reward = 15;
                             score += reward;
-                            
                         }
+                        else if(br->score = 30){
+                            reward = 30;
+                            score += reward;
+                        }
+                        reward = 0;
+                        score += reward;
                     }
-                    
+                        
             
                     continue;
                    
@@ -392,29 +364,21 @@ void Breakout::drawBalls(void) {
                 it->yvel *= -1;
                 br = hitBrick(br);
 
-                if(br->score = 10){
-                    if(br->broke = true){
-                        reward = br->score;
+                if(br->broke = true){
+                    if(br->score = 10){
+                        reward = 10;
                         score += reward;
-
                     }
-                }
-                else if(br->score = 15){
-                    if(br->broke = true){
-                        reward = br->score;
+                    else if(br->score = 15){
+                        reward = 15;
                         score += reward;
-                        
-                            
                     }
-            
-                        
-                }
-                else if(br->score = 20){
-                    if(br->broke = true){
-                        reward = br->score;
+                    else if(br->score = 30){
+                        reward = 30;
                         score += reward;
-                        
                     }
+                    reward = 0;
+                    score += reward;
                 }
                
                
@@ -429,29 +393,21 @@ void Breakout::drawBalls(void) {
                 it->xvel *= -1;
                 it->yvel *= -1;
                 br = hitBrick(br);
-                if(br->score = 10){
-                    if(br->broke = true){
-                        reward = br->score;
+                if(br->broke = true){
+                    if(br->score = 10){
+                        reward = 10;
                         score += reward;
-
                     }
-                }
-                else if(br->score = 15){
-                    if(br->broke = true){
-                        reward = br->score;
+                    else if(br->score = 15){
+                        reward = 15;
                         score += reward;
-                        
                     }
-                    
-                        
-                }
-                else if(br->score = 20){
-                    if(br->broke = true){
-                        reward = br->score;
+                    else if(br->score = 30){
+                        reward = 30;
                         score += reward;
-                        
                     }
-                   
+                    reward = 0;
+                    score += reward;
                 }
                 
                 continue;
@@ -465,29 +421,22 @@ void Breakout::drawBalls(void) {
                 it->xvel *= -1;
                 it->yvel *= -1;
                 br = hitBrick(br);
-                if(br->score = 10){
-                    if(br->broke = true){
-                        reward = br->score;
-                        score += reward;
-
-                    }
-                }
-                else if(br->score = 15){
-                    if(br->broke = true){
-                        reward = br->score;
-                        score += reward;
+                if(br->broke = true){
                         
-                            
-                    }
-                        
-                }
-                else if(br->score = 20){
-                    if(br->broke = true){
-                        reward = br->score;
+                    if(br->score = 10){
+                        reward = 10;
                         score += reward;
-                        
                     }
-                
+                    else if(br->score = 15){
+                        reward = 15;
+                        score += reward;
+                    }
+                    else if(br->score = 30){
+                        reward = 30;
+                        score += reward;
+                    }
+                    reward = 0;
+                    score += reward;
                 }
                 
                 
@@ -502,31 +451,22 @@ void Breakout::drawBalls(void) {
                 it->xvel *= -1;
                 it->yvel *= -1;
                 br = hitBrick(br);
-                if(br->score = 10){
-                    if(br->broke = true){
-                    reward = br->score;
+                if(br->broke = true){
+                        
+                    if(br->score = 10){
+                        reward = 10;
+                        score += reward;
+                    }
+                    else if(br->score = 15){
+                        reward = 15;
+                        score += reward;
+                    }
+                    else if(br->score = 30){
+                        reward = 30;
+                        score += reward;
+                    }
+                    reward = 0;
                     score += reward;
-
-                    }
-                    
-                }
-                else if(br->score = 15){
-                    if(br->broke = true){
-                        reward = br->score;
-                        score += reward;
-                        
-                            
-                    }
-                        
-                }
-                else if(br->score = 20){
-                    if(br->broke = true){
-                        reward = br->score;
-                        score += reward;
-                        paddle.width += 15.0F;
-                        
-                    }
-                    
                 }
                 
                 continue;
@@ -594,51 +534,17 @@ Iterator Breakout::hitBrick(Iterator brick) {
     
     
     // Decrece la salud del bloque
-    if(brick->score = 10){
-        if (brick->health > 2) {
-            brick->health -= 1;
-            return ++brick;
-        }
-        else if (brick->health > 1) {
-            brick->health -= 1;
-            return ++brick;
-        }
-        else {
-            return bricks.erase(brick);
-            brick->broke = true;
-        }
-
+    if (brick->health > 2) {
+        brick->health -= 1;
+        return ++brick;
     }
-
-    else if(brick->score = 15){
-        if (brick->health > 2) {
-            brick->health -= 1;
-            return ++brick;
-        }
-        else if (brick->health > 1) {
-            brick->health -= 1;
-            return ++brick;
-        }
-        else {
-            return bricks.erase(brick);
-            brick->broke = true;
-        }
-
+    else if (brick->health > 1) {
+        brick->health -= 1;
+        return ++brick;
     }
-    else if(brick->score = 20){
-        if (brick->health > 2) {
-            brick->health -= 1;
-            return ++brick;
-        }
-        else if (brick->health > 1) {
-            brick->health -= 1;
-            return ++brick;
-        }
-        else {
-            return bricks.erase(brick);
-            brick->broke = true;
-        }
-
+    else {
+        return bricks.erase(brick);
+        brick->broke = true;
     }
     
     
@@ -679,7 +585,7 @@ void Breakout::bricksLevel1(void) {
                 newBrick.broke = false;
                
             }
-            else if (i+1 > ceil(WALLROWS / 2.0) - 2 && i < ceil(WALLROWS / 2.0) + 2 && j+6 > ceil(WALLCOLS / 2.0) - 3 && j < ceil(WALLCOLS / 2.0) + 4){
+            else if (i+1 > ceil(WALLROWS / 2.0) - 2 && i < ceil(WALLROWS / 2.0) + 4 && j+4 > ceil(WALLCOLS / 2.0) - 2 && j < ceil(WALLCOLS / 2.0) + 3){
                 newBrick.r = 6.0f;
                 newBrick.g = 0.9f;
                 newBrick.b = 0.4f;
