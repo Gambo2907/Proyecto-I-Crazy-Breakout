@@ -15,10 +15,10 @@ Breakout::~Breakout() {
 
 void Breakout::display(void) {
 
-    // Clear buffer
+    // Limpiar buffer
     glClear(GL_COLOR_BUFFER_BIT);
 
-    // Set OpenGL for 2D drawing
+    // Configuración del OpenGL para 2D
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
     glDisable(GL_LIGHTING);
@@ -28,30 +28,29 @@ void Breakout::display(void) {
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
     
-    // Draw my cool gradient background
+    // Dibujar fondo
     drawBackground();
 
-    // Select which state of the game to display
+    // Selecciona que estado del juego se va amostrar
     switch (gameState) {
         case INIT:
-            // Init values
             WelcomeScreen();
             break;
             
         case Gameplay:
-            // Draw the game
+            // Dibuja el juego
             drawGame();
-            // If no balls, player loses the game
+            // Si no hay bolas, el jugador pierde
             if (balls.size() <= 0 & lifesCount > 0) {
                 newBall(-1, -1);
                 lifesCount--;
-                //reward = 100;
+                
             } else if (balls.size() <= 0) {
                 LoseScreen();
         
             }
             
-            // If no bricks, player wins the level
+            // Si no hay bloques el jugador gana
             if (bricks.size() <= 0 && level <= 2) {
                 level++;
                 initBricks();
@@ -136,26 +135,21 @@ void Breakout::LoseScreen(void){
 }
 
 void Breakout::init(void) {
-    // Reset game statistics
+    // Resetea las estadísticas del juego
     score = 0;
     level = 1;
     reward = 0;
     lifesCount = 5;
     
-    // Remove all balls
     balls.clear();
     
-    // Remove all bricks
     bricks.clear();
     
-    // Init bricks
     initBricks();
     
-    // Add ball and paddle
     initPaddle();
-    // Add menu
     gameState = Breakout::Gameplay;
-    // Start game play
+    // Inicia el juego
     
 }
 
@@ -163,11 +157,11 @@ void Breakout::init(void) {
 void Breakout::drawBackground(void) {
     glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
     glBegin(GL_QUADS);
-    // Top color
+    // Color de arriba
     glColor3f(0.3f, 0.3f, 0.3f);
     glVertex2f(WINWIDTH, WINHEIGHT);
     glVertex2f(-WINWIDTH, WINHEIGHT);
-    // Bottom color
+    // Color de abajo
     glColor3f(0.0f, 0.0f, 0.0f);
     glVertex2f(0.0f, 0.0f);
     glVertex2f(0.0f, 0.0f);
@@ -176,19 +170,14 @@ void Breakout::drawBackground(void) {
 
 void Breakout::drawGame(void) {
     
-    // // Draw coordinates for guidance
     //drawCoordinate();
 
-    // Draw balls
     drawBalls();
     
-    // Draw bricks
     drawBricks();
     
-    // Draw paddle
     drawPaddle();
     
-    // Draw game statistics (lifes, score)
     drawGameStats();
 
 
@@ -228,11 +217,11 @@ void Breakout::drawBalls(void) {
         }
         glEnd();
         
-        // Set new position
+        // Establece una nueva posición
         it->xpos += it->xvel;
         it->ypos += it->yvel;
         
-        // Collision with left/right/top window sides
+        // Colisión con los lados izquierdo / derecho / superior de la ventana
         if ( (it->xpos <= (2 * it->radius)) || (it ->xpos >= (WINWIDTH - 2 * it->radius)) ) {
             it->xvel *= -1;
         }
@@ -245,13 +234,13 @@ void Breakout::drawBalls(void) {
             continue;
         }
         
-        // Collission with the bricks
+        // Collisión con los bloques
         for (std::vector<Brick>::iterator br = bricks.begin(); br != bricks.end(); ) {
             
-            // Check collission between circle and vertical brick sides
+            // Comprueba la colisión entre la bola y los lados verticales del bloque.
             if (it->ypos >= br->ypos && it->ypos <= br->ypos + br->height) {
                 
-                // brick right edge and left point on circle
+                // Borde derecho de bloque y punto izquierdo en la bola.
                 if ((it->xpos - it->radius - br->xpos - br->width) <= 5 && (it->xpos - it->radius - br->xpos - br->width) >= 0) {
                     it->xvel *= -1;
                     br = hitBrick(br);
@@ -286,7 +275,8 @@ void Breakout::drawBalls(void) {
                     
                 } 
                 
-                // brick left edge and right point on circle
+                // borde izquierdo del bloque y punto derecho en la bola.
+
                 if ((it->xpos + it->radius - br->xpos) >= -5 && (it->xpos + it->radius - br->xpos) <= 0) {
                     it->xvel *= -1;
                     br = hitBrick(br);
@@ -322,9 +312,11 @@ void Breakout::drawBalls(void) {
                 }
             }
             
-            // Check collission between circle and horizontal brick sides
+            // Comprueba la colisión entre la bola y los lados horizontales del bloque.
+
             if (it->xpos >= br->xpos && it->xpos <= br->xpos + br->width) {
-                // brick bottom edge and top point on circle
+                // borde inferior del bloque y punto superior en la bola
+
                 if ((it->ypos - it->radius - br->ypos - br->height) <= 10 && (it->ypos - it->radius - br->ypos - br->height) >= 0) {
                     it->yvel *= -1;
                     br = hitBrick(br);
@@ -359,7 +351,7 @@ void Breakout::drawBalls(void) {
                     
                 }
                 
-                // brick top edge and bottom point on circle
+                // borde superior del bloque y punto inferior en la bola
                 if ((it->ypos + it->radius - br->ypos) >= -10 && (it->ypos + it->radius - br->ypos) <= 0) {
                     it->yvel *= -1;
                     br = hitBrick(br);
@@ -393,7 +385,7 @@ void Breakout::drawBalls(void) {
             }
             
             GLfloat d;
-            // Check collission with top left corner
+            // Comprueba la colisión con la esquina superior izquierda
             d = pow((it->xpos - br->xpos), 2.0) + pow((it->ypos - br->ypos), 2.0);
             if (d < it->radius + 5.0) {
                 it->xvel *= -1;
@@ -431,7 +423,7 @@ void Breakout::drawBalls(void) {
                 
             }
 
-            // Check collission with top right corner
+            // Comprueba la colisión con la esquina superior derecha
             d = pow((it->xpos - br->xpos - br->width), 2.0) + pow((it->ypos - br->ypos), 2.0);
             if (d < it->radius + 5.0) {
                 it->xvel *= -1;
@@ -467,7 +459,7 @@ void Breakout::drawBalls(void) {
             }
            
 
-            // Check collission with bottom left corner
+            // Comprueba la colisión con la esquina inferior izquierda
             d = pow((it->xpos - br->xpos), 2.0) + pow((it->ypos - br->ypos - br->height), 2.0);
             if (d < it->radius + 5.0) {
                 it->xvel *= -1;
@@ -504,7 +496,7 @@ void Breakout::drawBalls(void) {
             }
            
             
-            // Check collission with bottom right corner
+            // Comprueba la colisión con la esquina inferior derecha
             d = pow((it->xpos - br->xpos - br->width), 2.0) + pow((it->ypos - br->ypos - br->height), 2.0);
             if (d < it->radius + 5.0) {
                 it->xvel *= -1;
@@ -541,10 +533,10 @@ void Breakout::drawBalls(void) {
                 
             }
             
-            ++br; // next brick
+            ++br; // siguiente bloque
         }
         
-        // Check collission between paddle's top edge and bottom point on circle
+        // Compruebe la colisión entre el borde superior del paddle y el punto inferior de la bola.
         if (it->xpos >= paddle.xpos && it->xpos <= paddle.xpos + paddle.width) {
             if ((it->ypos + it->radius - paddle.ypos) >= -10 && (it->ypos + it->radius - paddle.ypos) <= 0) {
                 it->yvel *= -1;
@@ -553,7 +545,7 @@ void Breakout::drawBalls(void) {
             }
         }
         
-        ++it; // next ball
+        ++it; // próxima bola
     }
 }
 
@@ -568,7 +560,7 @@ void Breakout::initPaddle(void) {
 }
 
 void Breakout::drawPaddle() {
-    // Make sure paddle is larger than 25px
+
     if (paddle.width < 25) {
         paddle.width = 25;
     }
@@ -584,7 +576,7 @@ void Breakout::drawBricks(void) {
         glColor3f(it->r, it->g, it->b);
         glRectf(it->xpos, it->ypos, it->xpos + it->width, it->ypos + it->height);
         
-        // Top cool triangle (kind of texture)
+        
         glBegin(GL_QUADS);
         glColor3f(it->r-0.2f, it->g-0.2f, it->b-0.2f);
         glVertex2f(it->xpos, it->ypos);
@@ -600,9 +592,8 @@ void Breakout::drawBricks(void) {
 template <typename Iterator>
 Iterator Breakout::hitBrick(Iterator brick) {
     
-//    system("afpqlay ../../cartoon008.wav");
     
-    // Decrease brick health
+    // Decrece la salud del bloque
     if(brick->score = 10){
         if (brick->health > 2) {
             brick->health -= 1;
@@ -677,7 +668,7 @@ void Breakout::bricksLevel1(void) {
 
     for (int i = 0; i < WALLROWS; ++i) {
         for (int j = 0; j < WALLCOLS; ++j) {
-            // Set stronger bricks
+
             if (i+1 > ceil(WALLROWS / 2.0) - 2 && i < ceil(WALLROWS / 2.0) + 2 && j+2 > ceil(WALLCOLS / 2.0) - 3 && j < ceil(WALLCOLS / 2.0) + 3) {
                 newBrick.r = 1.0f;
                 newBrick.g = 0.5f;
@@ -721,7 +712,7 @@ void Breakout::bricksLevel2(void) {
     
     for (int i = 0; i < WALLROWS; i++) {
         for (int j = 0; j < WALLCOLS; j++) {
-            // Set stronger bricks
+        
             if (i == 1 || i == WALLROWS - 2 || j == 1 || j == WALLCOLS - 2) {
                 newBrick.r = 1.0f;
                 newBrick.g = 0.5f;
@@ -760,7 +751,7 @@ void Breakout::bricksLevel2(void) {
 
 void Breakout::drawGameStats(void) {
     glBegin(GL_LINES);
-    // Bottom right (red)
+
     glColor3f(1.0f, 0.0f, 0.0f);
     glVertex2f(20.0f, 30.0f);
     glVertex2f(WINWIDTH - 20.0f, 30.0f);
@@ -775,7 +766,7 @@ void Breakout::drawGameStats(void) {
 }
 
 void Breakout::drawLife(float x, float y) {
-    // Scale the heart symbol
+
     float const scale = 0.5f;
     
     // Heart symbol equations from Walfram Mathworld: http://mathworld.wolfram.com/HeartCurve.html
@@ -793,14 +784,14 @@ void Breakout::drawLife(float x, float y) {
 
 void Breakout::drawScore(void) {
     glPushMatrix();
-    // Write score word
+    // Escribe la palabra "Score"
     glColor3f(1.0f, 0.7f, 0.7f);
     glRasterPos2f(WINWIDTH - 120, 20);
     char buf[300], *p;
     p = buf;
     sprintf(buf, "Score: ");
     do glutBitmapCharacter(GLUT_BITMAP_HELVETICA_12, *p); while(*(++p));
-    // Print the score
+    // Muestra el score
     p = buf;
     sprintf(buf, "           %d", score);
     glColor3f(1.0f, 0.2f, 0.2f);
@@ -832,15 +823,7 @@ void Breakout::reshape(int width, int height) {
         glutReshapeWindow(WINWIDTH, WINHEIGHT);
 }
 
-//void Breakout::RandomBalls(void) {
-    
-    //if(score == 100){
-        //newBall(-1, -1);
-    //}
-    
-    // Force redraw
-    //glutPostRedisplay();
-//}
+
 
 void Breakout::mouseMove(int x, int y) {
     y = WINHEIGHT - y;
@@ -856,16 +839,9 @@ void Breakout::mouseMove(int x, int y) {
 
 void Breakout::keyStroke(unsigned char key, int x, int y) {
     switch (key) {
-        case 'q': // Exit
-            exit(0);
-            break;
         case 'p': // New game
             init();
             break;
-        /*case 'h':
-            newBall(-1,-1);
-            glutPostRedisplay();
-            break;*/
         case 27: // Esc button
             exit(0);
             break;

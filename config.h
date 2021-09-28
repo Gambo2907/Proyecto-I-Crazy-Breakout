@@ -9,8 +9,7 @@
 #ifndef crazyBreakout_config_h
 #define crazyBreakout_config_h
 
-// Force Redraw timer
-#define TIMER 16.6          // 60 frame per second
+#define TIMER 16.6          // 60 FPS
 
 /**
  * @brief Configuraciones de la ventana del juego y su menú
@@ -24,13 +23,13 @@ const int WINHEIGHT2 = 600;
 /**
  * @brief Configuraciones de las paredes para la creación de bloques
  */
-const int WALLWIDTH = 700;                          // Wall width
-const int WALLHEIGHT = 180;                         // Wall height
-const float WALLX = (WINWIDTH - WALLWIDTH) / 2.0f;  // Wall start point(x)
-const float WALLY = WALLX + 40;                     // Wall start point(y)
-const int WALLSPACE = 3;                            // Space between bricks
-const int WALLCOLS = 15;                            // Wall columns count
-const int WALLROWS = 10;                            // Wall rows count
+const int WALLWIDTH = 700;                          // Ancho de la pared
+const int WALLHEIGHT = 180;                         // Largo de la pared
+const float WALLX = (WINWIDTH - WALLWIDTH) / 2.0f;  // Punto x de inicio de la pared
+const float WALLY = WALLX + 40;                     // Punto y de inicio de la pared
+const int WALLSPACE = 3;                            // Espacio entre bloques
+const int WALLCOLS = 15;                            // Contador de las columnas de la pared
+const int WALLROWS = 10;                            // Contador de las filas de la pared
 
 
 const float PEDALWIDTH = 150.0f;
