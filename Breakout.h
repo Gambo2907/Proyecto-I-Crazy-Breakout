@@ -88,6 +88,7 @@ public:
 	void specialKeyPos(int key, int x, int y);
     
     
+    
 private:
     /**
      * @brief puntaje del juego
@@ -204,6 +205,7 @@ private:
     /**
      * @brief Elimina los bloques de acuerdo a su estado
      * @param brick  
+     * 
      */
     Iterator hitBrick(Iterator brick);
     

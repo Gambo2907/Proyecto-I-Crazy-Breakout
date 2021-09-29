@@ -201,6 +201,7 @@ void Breakout::newBall(float x = -1, float y = -1) {
     b1.r = 0.4f + (float) rand() / (RAND_MAX);
     b1.g = 0.25f + (float) rand() / (RAND_MAX);
     b1.b = 0.4f + (float) rand() / (RAND_MAX);
+    b1.prof = 0;
     balls.push_back(b1);
 }
 
@@ -249,17 +250,22 @@ void Breakout::drawBalls(void) {
                         int reward_1;
                         int reward_2;
                         int reward_3;
-                        if(br->score == 10){
+                        if(br->inx == 1){
                             reward_1 = 10;
                             score += reward_1;
                         }
-                        else if(br->score == 15){
+                        else if(br->inx == 2){
                             reward_2 = 15;
                             score += reward_2;
                         }
-                        else if(br->score == 20){
+                        else if(br->inx == 3){
                             reward_3 = 20;
                             score += reward_3;
+                        }
+                        else if(br->inx == 4){
+                            reward = 30;
+                            score += reward;
+                            
                         }
                         else{
                             reward = 0;
@@ -282,17 +288,22 @@ void Breakout::drawBalls(void) {
                         int reward_1;
                         int reward_2;
                         int reward_3;
-                        if(br->score == 10){
+                        if(br->inx == 1){
                             reward_1 = 10;
                             score += reward_1;
                         }
-                        else if(br->score == 15){
+                        else if(br->inx == 2){
                             reward_2 = 15;
                             score += reward_2;
                         }
-                        else if(br->score == 20){
+                        else if(br->inx == 3){
                             reward_3 = 20;
                             score += reward_3;
+                        }
+                        else if(br->inx == 4){
+                            reward = 30;
+                            score += reward;
+                            
                         }
                         else{
                             reward = 0;
@@ -318,18 +329,23 @@ void Breakout::drawBalls(void) {
                         int reward_1;
                         int reward_2;
                         int reward_3;
-                        if(br->score == 10){
+                        if(br->inx == 1){
                             reward_1 = 10;
                             score += reward_1;
                         }
-                        else if(br->score == 15){
+                        else if(br->inx == 2){
                             reward_2 = 15;
                             score += reward_2;
                         }
-                        else if(br->score == 20){
+                        else if(br->inx == 3){
                             reward_3 = 20;
                             score += reward_3;
-                        } 
+                        }
+                        else if(br->inx == 4){
+                            reward = 30;
+                            score += reward;
+                            
+                        }
                         else{
                             reward = 0;
                             score += reward;
@@ -349,17 +365,22 @@ void Breakout::drawBalls(void) {
                         int reward_1;
                         int reward_2;
                         int reward_3;
-                        if(br->score == 10){
+                        if(br->inx == 1){
                             reward_1 = 10;
                             score += reward_1;
                         }
-                        else if(br->score == 15){
+                        else if(br->inx == 2){
                             reward_2 = 15;
                             score += reward_2;
                         }
-                        else if(br->score == 20){
+                        else if(br->inx == 3){
                             reward_3 = 20;
                             score += reward_3;
+                        }
+                        else if(br->inx == 4){
+                            reward = 30;
+                            score += reward;
+                            
                         }
                         else{
                             reward = 0;
@@ -385,17 +406,22 @@ void Breakout::drawBalls(void) {
                     int reward_1;
                     int reward_2;
                     int reward_3;
-                    if(br->score == 10){
+                    if(br->inx == 1){
                         reward_1 = 10;
                         score += reward_1;
                     }
-                    else if(br->score == 15){
+                    else if(br->inx == 2){
                         reward_2 = 15;
                         score += reward_2;
                     }
-                    else if(br->score == 20){
+                    else if(br->inx == 3){
                         reward_3 = 20;
                         score += reward_3;
+                    }
+                    else if(br->inx == 4){
+                        reward = 30;
+                        score += reward;
+                        
                     }
                     else{
                         reward = 0;
@@ -419,17 +445,22 @@ void Breakout::drawBalls(void) {
                     int reward_1;
                     int reward_2;
                     int reward_3;
-                    if(br->score == 10){
+                    if(br->inx == 1){
                         reward_1 = 10;
                         score += reward_1;
                     }
-                    else if(br->score == 15){
+                    else if(br->inx == 2){
                         reward_2 = 15;
                         score += reward_2;
                     }
-                    else if(br->score == 20){
+                    else if(br->inx == 3){
                         reward_3 = 20;
                         score += reward_3;
+                    }
+                    else if(br->inx == 4){
+                        reward = 30;
+                        score += reward;
+                        
                     }
                     else{
                         reward = 0;
@@ -452,17 +483,22 @@ void Breakout::drawBalls(void) {
                     int reward_1;
                     int reward_2;
                     int reward_3;
-                    if(br->score == 10){
+                    if(br->inx == 1){
                         reward_1 = 10;
                         score += reward_1;
                     }
-                    else if(br->score == 15){
+                    else if(br->inx == 2){
                         reward_2 = 15;
                         score += reward_2;
                     }
-                    else if(br->score == 20){
+                    else if(br->inx == 3){
                         reward_3 = 20;
                         score += reward_3;
+                    }
+                    else if(br->inx == 4){
+                        reward = 30;
+                        score += reward;
+                        
                     }
                     else{
                         reward = 0;
@@ -486,17 +522,22 @@ void Breakout::drawBalls(void) {
                     int reward_1;
                     int reward_2;
                     int reward_3;
-                    if(br->score == 10){
+                    if(br->inx == 1){
                         reward_1 = 10;
                         score += reward_1;
                     }
-                    else if(br->score == 15){
+                    else if(br->inx == 2){
                         reward_2 = 15;
                         score += reward_2;
                     }
-                    else if(br->score == 20){
+                    else if(br->inx == 3){
                         reward_3 = 20;
                         score += reward_3;
+                        
+                    }
+                    else if(br->inx == 4){
+                        reward = 30;
+                        score += reward;
                     }
                     else{
                         reward = 0;
@@ -567,23 +608,48 @@ void Breakout::drawBricks(void) {
 template <typename Iterator>
 Iterator Breakout::hitBrick(Iterator brick) {
     
-    
-    // Decrece la salud del bloque
-    if (brick->health > 2) {
-        brick->health -= 1;
-        return ++brick;
+    if(brick->inx == 1){
+        return bricks.erase(brick);
+        brick->broke = true;
+
     }
-    else if (brick->health > 1) {
-        brick->health -= 1;
-        return ++brick;
+    else if(brick->inx == 2){
+        if (brick->health > 1) {
+            brick->health -= 1;
+            return ++brick;
+        }
+        else {
+            return bricks.erase(brick);
+            brick->broke = true;
+        }
+
     }
-    else {
+    else if(brick->inx == 3 ){
+        if (brick->health > 2) {
+            brick->health -= 1;
+            return ++brick;
+        }
+        else if (brick->health > 1) {
+            brick->health -= 1;
+            return ++brick;
+        }
+        else {
+            return bricks.erase(brick);
+            brick->broke = true;
+        }
+
+    }
+    else if(brick->inx == 4){
         return bricks.erase(brick);
         brick->broke = true;
     }
-    
+    else{
+        brick->health += 1;
+        return ++brick;
+    }
     
 }
+
 
 
 void Breakout::initBricks(void) {
@@ -602,6 +668,7 @@ void Breakout::bricksLevel1(void) {
     newBrick.health;
     newBrick.score;
     newBrick.broke;
+    newBrick.inx;
     newBrick.width = (WALLWIDTH - (WALLCOLS - 2) * WALLSPACE) / WALLCOLS;
     newBrick.height = (WALLHEIGHT - (WALLROWS - 2) * WALLSPACE) / WALLROWS;
 
@@ -618,6 +685,7 @@ void Breakout::bricksLevel1(void) {
                 newBrick.health = 2;
                 newBrick.score = 15;
                 newBrick.broke = false;
+                newBrick.inx = 2;
                
             }
             else if (i+1 > ceil(WALLROWS / 2.0) - 2 && i < ceil(WALLROWS / 2.0) + 4 && j+4 > ceil(WALLCOLS / 2.0) - 2 && j < ceil(WALLCOLS / 2.0) + 3){
@@ -627,8 +695,19 @@ void Breakout::bricksLevel1(void) {
                 newBrick.health = 3;
                 newBrick.score = 20;
                 newBrick.broke = false;
+                newBrick.inx = 3;
   
-            } 
+            }
+            else if (i+1 > ceil(WALLROWS / 2.0) - 2 && i < ceil(WALLROWS / 2.0) + 5 && j+3 > ceil(WALLCOLS / 2.0) - 3 && j < ceil(WALLCOLS / 2.0) + 4){
+                newBrick.r = 9.0f;
+                newBrick.g = 0.3f;
+                newBrick.b = 6.2f;
+                newBrick.health = 4;
+                newBrick.score = 30;
+                newBrick.broke = false;
+                newBrick.inx = 4;
+  
+            }
             
             else {
                 newBrick.r = 0.95f;
@@ -637,6 +716,7 @@ void Breakout::bricksLevel1(void) {
                 newBrick.health = 1;
                 newBrick.score = 10;
                 newBrick.broke = false;
+                newBrick.inx = 1;
             
             }
             
@@ -740,6 +820,7 @@ void Breakout::drawScore(void) {
     glRasterPos2f(WINWIDTH - 120, 20);
     do glutBitmapCharacter(GLUT_BITMAP_HELVETICA_12, *p); while(*(++p));
     glPopMatrix();
+    
 }
 
 void Breakout::drawCoordinate(void) {
@@ -787,6 +868,9 @@ void Breakout::keyStroke(unsigned char key, int x, int y) {
         case 27: // Esc button
             exit(0);
             break;
+        case 'b':
+            newBall(x,y);
+            break;
         default:
             break;
     }
@@ -818,4 +902,5 @@ void Breakout::specialKeyPos(int key, int x, int y) {
         default:
             break;
     }
+
 }
