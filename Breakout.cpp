@@ -31,7 +31,7 @@ void Breakout::display(void) {
     // Dibujar fondo
     drawBackground();
 
-    // Selecciona que estado del juego se va amostrar
+    // Selecciona que estado del juego se va a mostrar
     switch (gameState) {
         case INIT:
             WelcomeScreen();

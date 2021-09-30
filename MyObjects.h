@@ -33,6 +33,10 @@ struct Ball {
  * @brief colores de la bola
  */
     GLfloat r, g, b;
+   /**
+ * @brief profundidad de la bola
+ */
+    GLint prof;
 };
 
 /**
