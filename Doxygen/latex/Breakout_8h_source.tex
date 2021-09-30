@@ -1,0 +1,84 @@
+\hypertarget{Breakout_8h_source}{}\doxysection{Breakout.\+h}
+\mbox{\hyperlink{Breakout_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#ifndef BREAKOUT\_H}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#define BREAKOUT\_H}}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include <stdlib.h>}}
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include <math.h>}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#include <string.h>}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#if defined(\_\_APPLE\_\_) || defined(MACOSX)}}
+\DoxyCodeLine{18 \textcolor{preprocessor}{    \#include <GLUT/glut.h>}}
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{20 \textcolor{preprocessor}{    \#include "{}glut.h"{}}}
+\DoxyCodeLine{21 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{MyObjects_8h}{MyObjects.h}}"{}}      \textcolor{comment}{// Objetos del juego}}
+\DoxyCodeLine{24 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{config_8h}{config.h}}"{}}         \textcolor{comment}{// Configuraciones del juego}}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{31 \textcolor{keyword}{class }\mbox{\hyperlink{classBreakout}{Breakout}} \{}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33 \textcolor{keyword}{public}:}
+\DoxyCodeLine{34     \textcolor{comment}{// Class Constructor/Destructor}}
+\DoxyCodeLine{35     \mbox{\hyperlink{classBreakout}{Breakout}}();}
+\DoxyCodeLine{36     \mbox{\hyperlink{classBreakout}{\string~Breakout}}();}
+\DoxyCodeLine{37     }
+\DoxyCodeLine{42     \textcolor{keywordtype}{void} \mbox{\hyperlink{classBreakout_a8edc8c179dad66701e139a552a153334}{WelcomeScreen}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{47     \textcolor{keywordtype}{void} \mbox{\hyperlink{classBreakout_ad18c9954c9073c2f399d914ba184a90a}{display}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{52     \textcolor{keywordtype}{void} \mbox{\hyperlink{classBreakout_a3729e4045cb336d4fcafb7bf5e14f0f0}{init}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{57     \textcolor{keywordtype}{void} \mbox{\hyperlink{classBreakout_a7ea30d9067c8cfec85623b312089b2c8}{WinScreen}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{62     \textcolor{keywordtype}{void} \mbox{\hyperlink{classBreakout_a63abe742bd402bdc767dfb974a0b1231}{LoseScreen}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{68     \textcolor{keywordtype}{void} \mbox{\hyperlink{classBreakout_a33bde7684999702cf3c1eb5022eeb6b6}{reshape}}(\textcolor{keywordtype}{int} width, \textcolor{keywordtype}{int} height);}
+\DoxyCodeLine{74     \textcolor{keywordtype}{void} \mbox{\hyperlink{classBreakout_ac8397ca3f26ca8369d618cf5aafd6daf}{mouseMove}}(\textcolor{keywordtype}{int} x, \textcolor{keywordtype}{int} y);}
+\DoxyCodeLine{81     \textcolor{keywordtype}{void} \mbox{\hyperlink{classBreakout_ad990d52ca9d8f7e8519dfa7562b589d7}{keyStroke}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} key, \textcolor{keywordtype}{int} x, \textcolor{keywordtype}{int} y);}
+\DoxyCodeLine{88     \textcolor{keywordtype}{void} \mbox{\hyperlink{classBreakout_a6e24dd0a73225260d9029a0fd6024ddb}{specialKeyPos}}(\textcolor{keywordtype}{int} key, \textcolor{keywordtype}{int} x, \textcolor{keywordtype}{int} y);}
+\DoxyCodeLine{89     }
+\DoxyCodeLine{90     }
+\DoxyCodeLine{91 \textcolor{keyword}{private}:}
+\DoxyCodeLine{95     \textcolor{keywordtype}{int} score;}
+\DoxyCodeLine{99     \textcolor{keywordtype}{int} level;}
+\DoxyCodeLine{103     \textcolor{keywordtype}{int} reward;}
+\DoxyCodeLine{107     \textcolor{keywordtype}{int} lifesCount;}
+\DoxyCodeLine{108     }
+\DoxyCodeLine{117     \textcolor{keyword}{enum} State \{INIT, Gameplay, Win, LOSE\};}
+\DoxyCodeLine{118     Breakout::State gameState;}
+\DoxyCodeLine{119     }
+\DoxyCodeLine{120     \textcolor{comment}{// Balls}}
+\DoxyCodeLine{121     std::vector <Ball> balls;}
+\DoxyCodeLine{122     }
+\DoxyCodeLine{123     \textcolor{comment}{// Paddle}}
+\DoxyCodeLine{124     \mbox{\hyperlink{structPaddle}{Paddle}} paddle;}
+\DoxyCodeLine{125     }
+\DoxyCodeLine{126     \textcolor{comment}{// Bricks}}
+\DoxyCodeLine{127     std::vector<Brick> bricks;}
+\DoxyCodeLine{128     }
+\DoxyCodeLine{129     \textcolor{comment}{// Private functions}}
+\DoxyCodeLine{134 \textcolor{comment}{}    \textcolor{keywordtype}{void} drawBackground(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{139     \textcolor{keywordtype}{void} drawGame(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{145     \textcolor{keywordtype}{void} newBall(\textcolor{keywordtype}{float} x, \textcolor{keywordtype}{float} y);}
+\DoxyCodeLine{150     \textcolor{keywordtype}{void} drawBalls(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{155     \textcolor{keywordtype}{void} initPaddle(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{160     \textcolor{keywordtype}{void} drawPaddle(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{165     \textcolor{keywordtype}{void} initBricks(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{170     \textcolor{keywordtype}{void} bricksLevel1(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{175     \textcolor{keywordtype}{void} bricksLevel2(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{180     \textcolor{keywordtype}{void} drawBricks(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{184     \textcolor{keyword}{template} <\textcolor{keyword}{typename} Iterator>}
+\DoxyCodeLine{189     \textcolor{keywordtype}{int} wallCollision(Iterator it);}
+\DoxyCodeLine{193     \textcolor{keyword}{template} <\textcolor{keyword}{typename} Iterator>}
+\DoxyCodeLine{199     \textcolor{keywordtype}{bool} brickCollision(Iterator it, Iterator br);}
+\DoxyCodeLine{203     \textcolor{keyword}{template} <\textcolor{keyword}{typename} Iterator>}
+\DoxyCodeLine{208     Iterator hitBrick(Iterator brick);}
+\DoxyCodeLine{209     }
+\DoxyCodeLine{216     \textcolor{keywordtype}{void} drawLife(\textcolor{keywordtype}{float} x, \textcolor{keywordtype}{float} y);}
+\DoxyCodeLine{221     \textcolor{keywordtype}{void} drawGameStats(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{226     \textcolor{keywordtype}{void} drawScore(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{231     \textcolor{keywordtype}{void} drawCoordinate(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{232 \};}
+\DoxyCodeLine{233 }
+\DoxyCodeLine{234 \textcolor{preprocessor}{\#endif }}
+
+\end{DoxyCode}

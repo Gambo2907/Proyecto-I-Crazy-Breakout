@@ -1,0 +1,121 @@
+\hypertarget{classBreakout}{}\doxysection{Breakout Class Reference}
+\label{classBreakout}\index{Breakout@{Breakout}}
+
+
+Clase principal donde se crea todo el juego.  
+
+
+
+
+{\ttfamily \#include $<$Breakout.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classBreakout_a8edc8c179dad66701e139a552a153334}\label{classBreakout_a8edc8c179dad66701e139a552a153334}} 
+void {\bfseries Welcome\+Screen} (void)
+\begin{DoxyCompactList}\small\item\em Crea la ventana de inicio del juego. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classBreakout_ad18c9954c9073c2f399d914ba184a90a}\label{classBreakout_ad18c9954c9073c2f399d914ba184a90a}} 
+void {\bfseries display} (void)
+\begin{DoxyCompactList}\small\item\em Función por la cual pasan las ventanas que contiene el juego. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classBreakout_a3729e4045cb336d4fcafb7bf5e14f0f0}\label{classBreakout_a3729e4045cb336d4fcafb7bf5e14f0f0}} 
+void {\bfseries init} (void)
+\begin{DoxyCompactList}\small\item\em Inicializa el juego. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classBreakout_a7ea30d9067c8cfec85623b312089b2c8}\label{classBreakout_a7ea30d9067c8cfec85623b312089b2c8}} 
+void {\bfseries Win\+Screen} (void)
+\begin{DoxyCompactList}\small\item\em Crea la ventana de victoria. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classBreakout_a63abe742bd402bdc767dfb974a0b1231}\label{classBreakout_a63abe742bd402bdc767dfb974a0b1231}} 
+void {\bfseries Lose\+Screen} (void)
+\begin{DoxyCompactList}\small\item\em Crea la ventana de derrota. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBreakout_a33bde7684999702cf3c1eb5022eeb6b6}{reshape}} (int width, int height)
+\begin{DoxyCompactList}\small\item\em Inicializa el tamaño de la ventana del juego. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBreakout_ac8397ca3f26ca8369d618cf5aafd6daf}{mouse\+Move}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Logra parametrizar los movimientos del mouse. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBreakout_ad990d52ca9d8f7e8519dfa7562b589d7}{key\+Stroke}} (unsigned char key, int x, int y)
+\begin{DoxyCompactList}\small\item\em Logra conocer cuando se toca una tecla. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBreakout_a6e24dd0a73225260d9029a0fd6024ddb}{special\+Key\+Pos}} (int key, int x, int y)
+\begin{DoxyCompactList}\small\item\em Logra conocer cuando se toca el click derecho e izquierdo del mouse. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Clase principal donde se crea todo el juego. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classBreakout_ad990d52ca9d8f7e8519dfa7562b589d7}\label{classBreakout_ad990d52ca9d8f7e8519dfa7562b589d7}} 
+\index{Breakout@{Breakout}!keyStroke@{keyStroke}}
+\index{keyStroke@{keyStroke}!Breakout@{Breakout}}
+\doxysubsubsection{\texorpdfstring{keyStroke()}{keyStroke()}}
+{\footnotesize\ttfamily void Breakout\+::key\+Stroke (\begin{DoxyParamCaption}\item[{unsigned char}]{key,  }\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+Logra conocer cuando se toca una tecla. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & \\
+\hline
+{\em x} & \\
+\hline
+{\em y} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classBreakout_ac8397ca3f26ca8369d618cf5aafd6daf}\label{classBreakout_ac8397ca3f26ca8369d618cf5aafd6daf}} 
+\index{Breakout@{Breakout}!mouseMove@{mouseMove}}
+\index{mouseMove@{mouseMove}!Breakout@{Breakout}}
+\doxysubsubsection{\texorpdfstring{mouseMove()}{mouseMove()}}
+{\footnotesize\ttfamily void Breakout\+::mouse\+Move (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+Logra parametrizar los movimientos del mouse. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & \\
+\hline
+{\em y} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classBreakout_a33bde7684999702cf3c1eb5022eeb6b6}\label{classBreakout_a33bde7684999702cf3c1eb5022eeb6b6}} 
+\index{Breakout@{Breakout}!reshape@{reshape}}
+\index{reshape@{reshape}!Breakout@{Breakout}}
+\doxysubsubsection{\texorpdfstring{reshape()}{reshape()}}
+{\footnotesize\ttfamily void Breakout\+::reshape (\begin{DoxyParamCaption}\item[{int}]{width,  }\item[{int}]{height }\end{DoxyParamCaption})}
+
+
+
+Inicializa el tamaño de la ventana del juego. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em widht} & ancho \\
+\hline
+{\em height} & largo \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classBreakout_a6e24dd0a73225260d9029a0fd6024ddb}\label{classBreakout_a6e24dd0a73225260d9029a0fd6024ddb}} 
+\index{Breakout@{Breakout}!specialKeyPos@{specialKeyPos}}
+\index{specialKeyPos@{specialKeyPos}!Breakout@{Breakout}}
+\doxysubsubsection{\texorpdfstring{specialKeyPos()}{specialKeyPos()}}
+{\footnotesize\ttfamily void Breakout\+::special\+Key\+Pos (\begin{DoxyParamCaption}\item[{int}]{key,  }\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+Logra conocer cuando se toca el click derecho e izquierdo del mouse. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & \\
+\hline
+{\em x} & \\
+\hline
+{\em y} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{Breakout_8h}{Breakout.\+h}}\item 
+Breakout.\+cpp\end{DoxyCompactItemize}
