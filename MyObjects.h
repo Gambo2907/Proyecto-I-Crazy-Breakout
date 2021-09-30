@@ -33,10 +33,6 @@ struct Ball {
  * @brief colores de la bola
  */
     GLfloat r, g, b;
-    /**
- * @brief Nivel de profundidad de la bola
- */
-    GLint prof;
 };
 
 /**
@@ -99,10 +95,6 @@ struct Brick {
  * @param broke confirma si el bloque está eliminado o no
  */
     GLboolean broke;
-    /**
-     * @param inx indice del bloque
-     */
-    GLint inx;
 };
 
 #endif
