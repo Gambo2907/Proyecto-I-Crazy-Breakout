@@ -206,6 +206,7 @@ private:
      * @param brick  
      */
     Iterator hitBrick(Iterator brick);
+
     
     /**
      * @brief Muestra la vidas restantes en pantalla
